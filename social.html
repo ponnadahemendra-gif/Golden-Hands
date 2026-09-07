@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Golden Hand community reviews and artisan stories" />
+  <title>Community & Reviews — Golden Hand</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="social-page">
+  <header class="social-header">
+    <a class="logo" href="index.html"><span class="logo-mark">✦</span> Golden Hand</a>
+    <nav class="community-nav" aria-label="Community navigation"><a href="#reviews">Community</a><a href="#makers">Makers</a><a href="#events">Events</a></nav>
+    <a class="btn btn-light" href="index.html">← Back to marketplace</a>
+  </header>
+  <main>
+    <section class="social-hero">
+      <div>
+        <div class="eyebrow">Golden Hand community</div>
+        <h1>Stories made by hand,<br>shared with heart.</h1>
+        <p>Read buyer reviews, meet the people behind the craft, and join our growing community.</p>
+      </div>
+      <div class="community-score" aria-label="Rated 4.9 out of 5"><b>4.9</b><span>★★★★★</span><small>from our craft community</small></div>
+    </section>
+
+    <section class="social-section community-layout" id="reviews">
+      <aside class="community-sidebar">
+        <div class="community-cover"></div><div class="community-avatar">✦</div><h2>Golden Hand Circle</h2><p>A friendly place for people who value handmade things.</p><div class="community-meta"><span><b>12.4k</b> members</span><span><b>1.8k</b> makers</span></div><button class="btn btn-dark" type="button" onclick="document.querySelector('#review-name').focus()">Join the conversation</button>
+        <div class="community-rules"><b>Community guidelines</b><span>Be kind and curious</span><span>Celebrate original work</span><span>Share honest experiences</span></div>
+      </aside>
+      <div class="community-feed">
+        <div class="feed-heading"><div><div class="eyebrow">Community feed</div><h2>Kind words, real homes.</h2></div><button class="feed-filter" type="button">⌄ Latest</button></div>
+        <div class="composer"><div class="member-avatar avatar-sun">S</div><button type="button" onclick="document.querySelector('#review-name').focus()">Share a craft story with the community…</button><span>📷 Photo</span><span>▶ Video</span></div>
+        <div class="review-grid">
+          <article class="review-card social-post"><div class="post-author"><div class="member-avatar avatar-rose">P</div><div><b>Priya Sharma</b><small>Mumbai · 2 hours ago</small></div><button aria-label="More options">•••</button></div><p>“The diya set feels even more beautiful in person. It arrived carefully packed with a lovely note from the maker.”</p><div class="post-photo diya-photo">🪔</div><small>Purchased: Brass Diya Set · ★★★★★</small><div class="post-actions"><button type="button" onclick="toggleReaction(this)">♡ <span>24</span></button><button type="button">◌ Comment</button><button type="button">↗ Share</button></div></article>
+          <article class="review-card social-post"><div class="post-author"><div class="member-avatar avatar-green">A</div><div><b>Arjun Rao</b><small>Bengaluru · Yesterday</small></div><button aria-label="More options">•••</button></div><p>“The weaving and colour are exceptional. I love knowing exactly where my saree came from.”</p><div class="post-photo textile-photo">🧵</div><small>Purchased: Kanchipuram Silk Saree · ★★★★★</small><div class="post-actions"><button type="button" onclick="toggleReaction(this)">♡ <span>41</span></button><button type="button">◌ Comment</button><button type="button">↗ Share</button></div></article>
+          <article class="review-card social-post"><div class="post-author"><div class="member-avatar avatar-gold">M</div><div><b>Meera Kapoor</b><small>Delhi · 3 days ago</small></div><button aria-label="More options">•••</button></div><p>“A wonderful handmade gift. The artist answered my question quickly and made it feel personal.”</p><small>Purchased: Madhubani Painting · ★★★★★</small><div class="post-actions"><button type="button" onclick="toggleReaction(this)">♡ <span>19</span></button><button type="button">◌ Comment</button><button type="button">↗ Share</button></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="social-section social-promotions" id="events">
+      <div class="section-head"><div class="eyebrow">Featured</div><h2>Discover more from the community.</h2></div>
+      <div class="ad-grid">
+        <article class="ad-card"><span class="ad-label">Featured collection</span><div class="ad-icon">🧵</div><h3>Handloom for every home</h3><p>Explore warm textiles, made slowly by master weavers.</p><a href="buyer.html">Shop handloom →</a></article>
+        <article class="ad-card ad-card-green"><span class="ad-label">Artisan spotlight</span><div class="ad-icon">🏺</div><h3>Meet the makers of Bankura</h3><p>See how terracotta takes shape from earth, fire, and tradition.</p><a href="buyer.html">View story →</a></article>
+        <article class="ad-card ad-card-gold"><span class="ad-label">Community event</span><div class="ad-icon">✦</div><h3>Weekend craft workshop</h3><p>Save your place for a live conversation with independent makers.</p><a href="#community">Reserve a seat →</a></article>
+      </div>
+    </section>
+
+    <section class="social-section social-split" id="makers">
+      <article class="social-feature"><div class="eyebrow">Meet the makers</div><h2>Every purchase supports a living craft.</h2><p>Follow new collections, studio moments, and the stories of artisans keeping heritage skills alive.</p><div class="social-links"><a href="#community">◎ Instagram</a><a href="#community">◉ YouTube</a><a href="#community">◌ Facebook</a></div></article>
+      <form class="review-form" id="community" onsubmit="addReview(event)">
+        <div class="eyebrow">Share your experience</div><h2>Leave a review</h2>
+        <label class="field">Your name<input required id="review-name" maxlength="50" placeholder="Your name" /></label>
+        <label class="field">Your review<textarea required id="review-text" maxlength="280" placeholder="Tell the community what you loved"></textarea></label>
+        <label class="field">Add a photo or video <small>Optional · image or short video</small><input id="review-media" type="file" accept="image/*,video/*" onchange="previewReviewMedia(this)" /></label>
+        <div class="media-preview" id="media-preview" hidden></div>
+        <button class="btn btn-gold" type="submit">Share review →</button>
+        <p class="review-note" id="review-note" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+  <script>
+    function addReview(event) {
+      event.preventDefault();
+      const name = document.querySelector('#review-name').value.trim();
+      const text = document.querySelector('#review-text').value.trim();
+      const file = document.querySelector('#review-media').files[0];
+      const card = document.createElement('article');
+      card.className = 'review-card';
+      card.innerHTML = `<div class="review-top"><b></b><span>★★★★★</span></div><p></p><div class="review-media"></div><small>Shared with the Golden Hand community</small>`;
+      card.querySelector('b').textContent = name;
+      card.querySelector('p').textContent = `“${text}”`;
+      if (file) {
+        const media = file.type.startsWith('video/') ? document.createElement('video') : document.createElement('img');
+        media.src = URL.createObjectURL(file);
+        media.alt = file.type.startsWith('image/') ? `Review shared by ${name}` : '';
+        if (media.tagName === 'VIDEO') media.controls = true;
+        card.querySelector('.review-media').append(media);
+      }
+      document.querySelector('.community-feed .review-grid').prepend(card);
+      event.currentTarget.reset();
+      document.querySelector('#media-preview').replaceChildren();
+      document.querySelector('#media-preview').hidden = true;
+      document.querySelector('#review-note').textContent = 'Thank you — your review has been shared.';
+    }
+    function previewReviewMedia(input) {
+      const preview = document.querySelector('#media-preview');
+      preview.replaceChildren();
+      const file = input.files[0];
+      if (!file) { preview.hidden = true; return; }
+      const media = file.type.startsWith('video/') ? document.createElement('video') : document.createElement('img');
+      media.src = URL.createObjectURL(file);
+      media.alt = file.type.startsWith('image/') ? 'Selected review attachment' : '';
+      if (media.tagName === 'VIDEO') { media.controls = true; media.muted = true; }
+      preview.append(media);
+      preview.hidden = false;
+    }
+    function toggleReaction(button) {
+      const count = button.querySelector('span');
+      const liked = button.classList.toggle('liked');
+      button.firstChild.textContent = liked ? '♥ ' : '♡ ';
+      count.textContent = Number(count.textContent) + (liked ? 1 : -1);
+    }
+  </script>
+</body>
+</html>
